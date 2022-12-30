@@ -224,6 +224,10 @@ article.first-new {
     color: var(--color-very-dark-blue);
 }
 
+.top h5:hover {
+  color: var(--color-soft-red);
+}
+
 .top p {
     color: var(--color-dark-grayish-blue);
 }
