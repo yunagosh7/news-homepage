@@ -15,6 +15,10 @@
   --width-mobile: 375px;
   --nav-height: 3rem;
 }
+a {
+    text-decoration: none;
+}
+
 body {
   margin: 0;
 }
@@ -42,7 +46,7 @@ html {
 /* Clases reutilizables */
 
 .btn {
-  text-decoration: none;
+  
   color: var(--btn-color);
   background-color: var(--color-soft-red);
   color: #fff;
@@ -67,6 +71,10 @@ html {
 
 .flex {
   display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
 }
 
 .text-gray {
@@ -98,7 +106,7 @@ article.first-new {
 .main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin: 7rem 2rem;
+  margin: 6rem 2rem;
   gap: 2rem;
 }
 
@@ -130,7 +138,7 @@ article.first-new {
 
 .nav-links > a {
   margin: 0 1rem;
-  text-decoration: none;
+  
 }
 
 .nav-links > a:hover {
@@ -150,8 +158,8 @@ article.first-new {
     border-top: 1px solid var(--color-grayish-blue);
 }
 
-.new h5:hover {
-    text-decoration: none;
+.new h4:hover {
+    
     color: var(--color-soft-orange);
 }
 
@@ -162,7 +170,7 @@ article.first-new {
 }
 
 .news a {
-    text-decoration: none;
+    
 }
 
 .news h3 {
@@ -171,7 +179,7 @@ article.first-new {
     margin: 2rem;
 }
 
-.news h5 {
+.news h4 {
     color: #fff;
     font-size: 1.25rem;
 }
@@ -196,6 +204,34 @@ article.first-new {
 
 .title-container p {
   line-height: 1.5rem;
+}
+
+.top {
+    grid-column: 1 / 4 ;
+}
+
+.top aside {
+    margin: 0 1.5rem;
+}
+
+.top img {
+    width: 6rem;
+    object-fit: contain;
+}
+
+.top h5 {
+    font-size: 1.25rem;
+    color: var(--color-very-dark-blue);
+}
+
+.top p {
+    color: var(--color-dark-grayish-blue);
+}
+
+.top-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color:  var(--color-grayish-blue);
 }
 
 @media screen and (max-width: 700px) {
