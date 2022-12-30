@@ -1,35 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="assets/styles/style.css">
+
   <title>Frontend Mentor | News homepage</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
 
-  Home
-  New
-  Popular
-  Trending
-  Categories
+
+  <div class="container">
+    <nav class="nav">
+      <img src='assets/images/logo.svg' class="nav-logo" alt="news-homepage logo">
+
+      <div class="modal" id="nav">
+      </div>
+
+      <div class="nav-links">
+
+        <a class="link-btn" href="#close">
+          <img class="nav-btn" src="assets/images/icon-menu-close.svg" alt="close menu">
+
+        </a>
+        <a href="#">Home</a>
+        <a href="#">New</a>
+        <a href="#">Popular</a>
+        <a href="#">Trending</a>
+        <a href="#">Categories</a>
+      </div>
+      <a class="link-btn" href="#nav">
+
+        <img class="nav-btn" src="assets/images/icon-menu.svg" alt="open menu">
+      </a>
+
+
+    </nav>
+  </div>
+  <br><br><br><br><br><br><br>
 
   The Bright Future of Web 3.0?
 
-  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the
+  people.
   But is it really fulfilling its promise?
 
   Read more
 
-  New 
+  New
 
   Hydrogen VS Electric Cars
   Will hydrogen-fueled cars ever catch up to EVs?
@@ -51,10 +86,13 @@
   03
   The Growth of Gaming
   How the pandemic has sparked fresh opportunities.
-  
+
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Juan Cruz Vila</a>.
   </div>
+
+  <script src="js/main.js"></script>
 </body>
+
 </html>

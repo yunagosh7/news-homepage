@@ -1,7 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 :root {
-    
+    --color-soft-orange: #e9ab53;
+    --color-soft-red: #f15e50;
+    --color-off-white: #fffdfa;
+    --color-grayish-blue: #c5c6ce;
+    --color-dark-grayish-blue: #5d5f79;
+    --color-very-dark-blue: #00001a;
+    --color-text-gray: rgb(78, 78, 78) ;
+
+    --font-family: 'Inter', sans-serif;
+    --width-desktop: 1440px;
+    --width-mobile: 375px; 
+    --nav-height: 3rem;
+}
+body {
+    margin: 0;
 }
 
 html {
-    font-size: 16px;
+    font-size: 15px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--font-family) ;
+
+}
+
+
+/* Clases reutilizables */
+.container {
+    max-width: var(--width-desktop);
+    margin: 0 auto;
+}
+
+
+.modal {
+    display: none;
+}
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100vw;
+    padding: 2rem;
+}
+
+.nav-btn {
+    display: none;
+}
+
+.nav-links {
+    display: flex; 
+}
+
+.nav-links > a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: var(--color-text-gray) ;
+}
+
+.nav-links > a:hover{
+    color: var(--color-soft-red);
+}
+
+.nav-logo {
+    height: 2.5rem;
+}
+
+.link-btn {
+    display: none;
+}
+
+
+@media screen and (max-width:700px) {
+    .modal{
+        position: fixed;
+        z-index: 99;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #5050508f;
+        opacity: 0;
+        pointer-events: none;
+        display: block;
+    }
+
+    .modal[id="nav"]:target {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .nav-btn {
+        display: block;
+        cursor: pointer;
+        height: 1.25rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 65vw;
+        background-color: #fff;
+        height: 100vh;
+        position: absolute;
+        padding: 2rem;
+        top: 0;
+        right: -450px;
+        transition: all .75s ease;
+    }
+
+    .nav-links > a {
+        font-size: 1.25rem;
+        margin: 1rem 0;
+        
+    }
+
+    .nav-links.active {
+        top: 0;
+        right: 0;
+        z-index: 999;
+        
+    }
+
+    .link-btn {
+        width: 2rem;
+        height: 2rem;
+        align-self: flex-end;
+        display: block;
+        
+    }
+
+    .nav-logo {
+        height: 2.25rem;
+    }
+
 }
